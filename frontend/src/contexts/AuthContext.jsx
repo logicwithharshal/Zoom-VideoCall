@@ -12,7 +12,7 @@ const client = axios.create({
 export const AuthProvider = ({children}) => {
     const authContext = useContext(AuthContext);
     const [userData, setUserData] = useState(authContext);
-    // const router = useNavigate();
+    const router = useNavigate();
 
     const handleRegister = async (name, username, password) => {
         try{
@@ -43,7 +43,7 @@ export const AuthProvider = ({children}) => {
             throw err;
         }
     }
-    const router = useNavigate();
+    // const router = useNavigate();
 
     const data = {
         userData, setUserData, handleRegister, handleLogin

@@ -14,13 +14,13 @@ import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { AuthContext } from "../contexts/AuthContext";
 import Snackbar from '@mui/material/Snackbar';
+import { useNavigate } from 'react-router-dom';
 
 // TODO remove, this demo shouldn't need to reset the theme.
-
 const defaultTheme = createTheme();
 
 export default function Authentication() {
-
+  const navigate = useNavigate();
   const [username, setUsername] = React.useState();
   const [password, setPassword] = React.useState();
   const [name, setName] = React.useState();
@@ -33,10 +33,11 @@ export default function Authentication() {
     try{
       if(formState===0){
         let result = await handleLogin(username, password);
+        // navigate('/home');
       }
       if(formState===1){
         let result = await handleRegister(name, username, password);
-        console.log(result);
+        // console.log(result);
         setUsername("");
         setMessage(result);
         setOpen(true);
