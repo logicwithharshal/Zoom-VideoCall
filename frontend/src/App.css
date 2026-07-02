@@ -1,4 +1,5 @@
 .LandingPageContainer{
+  overflow: hidden;
   width: 100vw;
   height: 100vh;
   background-image: url("/public/Background.jpg");
@@ -27,15 +28,22 @@
   justify-self: center;
   padding-right: 80px;
 }
-.LandingPageContainer nav .navlist p :hover {
+/* .LandingPageContainer nav .navlist p :hover {
   cursor: pointer;
-  /* text-decoration: none;
-  background-color: white; */
-}
+  text-decoration: none;
+  background-color: white;
+} */
  /* .LandingPageContainer > .navlist > Button{
   text-decoration: none;
   color: white;
  } */
+.navlist p {
+    cursor: pointer;
+}
+
+.navlist div {
+    cursor: pointer;
+}
 .landingMainContainer{
   display: flex;
   justify-content: space-between;
@@ -63,7 +71,7 @@
 
 }
 .landingMainContainer > div:nth-child(2) img{
-  height: 90vh;
+  height: 81vh;
   width: auto;
   padding-right: 110px;
 }
